@@ -1,5 +1,10 @@
 # Migration validation
 
+`scripts/Verify-Build.ps1` runs the full sequence below end-to-end (plus the
+protocol and security Release builds) and reports pass/fail per step instead
+of each command being copy-pasted by hand — run `pwsh ./scripts/Verify-Build.ps1`
+from the repository root (see issue #2).
+
 Run from repository root on Windows:
 
 ```powershell
