@@ -94,6 +94,18 @@ try {
         "found $version"
     }
 
+    Test-Prerequisite -Name 'PowerShell 7+ / pwsh (required by tests/memory.Tests.ps1)' -Check {
+        $edition = $PSVersionTable.PSEdition
+        $psVersion = $PSVersionTable.PSVersion
+        if ($edition -ne 'Core' -or $psVersion.Major -lt 7) {
+            throw ("running $edition $psVersion. tests/memory.Tests.ps1 calls a String.Contains overload " +
+                   'that only exists on .NET Core, not .NET Framework, so it fails under Windows PowerShell ' +
+                   '5.1 with a Cannot-find-an-overload-for-Contains error partway through. Install PowerShell ' +
+                   '7 (pwsh) and re-run this script with it: pwsh ./scripts/Verify-Build.ps1')
+        }
+        "running $edition $psVersion"
+    }
+
     # -----------------------------------------------------------------
     # Verification sequence, in docs/MIGRATION.md order.
     # -----------------------------------------------------------------
