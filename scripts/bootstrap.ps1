@@ -1,0 +1,5 @@
+Write-Host "RemoteJARVIS contributor bootstrap"
+Write-Host "1. Read AGENTS.md and docs/ARCHITECTURE.md"
+Write-Host "2. Create/claim a GitHub issue before substantial work"
+Write-Host "3. Use a dedicated branch/worktree"
+Write-Host "4. Follow component-specific setup once migrated"

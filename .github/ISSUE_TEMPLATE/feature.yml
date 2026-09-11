@@ -1,0 +1,29 @@
+name: Feature request
+description: Propose a scoped improvement
+title: "[Feature]: "
+labels: ["type:feature", "needs design"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / use case
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options: [iOS, Host, Protocol, Integration, CI/Tooling, Documentation, Unsure]
+    validations:
+      required: true
+  - type: textarea
+    id: security
+    attributes:
+      label: Security considerations
+      description: Mention authentication, permissions, remote execution, networking, or sensitive data implications.

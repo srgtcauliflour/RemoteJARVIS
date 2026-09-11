@@ -1,0 +1,32 @@
+name: Contributor task
+description: A well-scoped implementation/documentation task
+title: "[Task]: "
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: Components/files expected to change.
+    validations:
+      required: true
+  - type: textarea
+    id: outscope
+    attributes:
+      label: Out of scope
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation commands

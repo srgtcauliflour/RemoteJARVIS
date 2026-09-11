@@ -1,0 +1,37 @@
+# Secrets/local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+
+# macOS / Xcode
+.DS_Store
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.ipa
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Node (if used by tooling/host)
+node_modules/
+
+# Editors
+.vscode/
+.idea/
+
+# Logs/build output
+*.log
+build/
+dist/
+coverage/

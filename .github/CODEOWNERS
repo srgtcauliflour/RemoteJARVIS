@@ -1,0 +1,8 @@
+# Start with the project owner as fallback. Add trusted area owners as the community grows.
+* @srgtcauliflour
+
+# Examples to enable later:
+# /ios/ @ios-maintainer
+# /host/ @host-maintainer
+# /protocol/ @protocol-maintainer
+# /SECURITY.md @security-maintainer
