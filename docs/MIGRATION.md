@@ -56,6 +56,8 @@ dotnet build protocol/AgentBridge.Protocol/AgentBridge.Protocol.csproj -c Releas
 dotnet build host/AgentBridge/src/AgentBridge.Security/AgentBridge.Security.csproj -c Release
 ```
 
+`scripts/Verify-Build.ps1` scripts this exact sequence end-to-end (plus the protocol checks harness — see `tests/README.md`) and reports pass/fail per step instead of each command being run by hand (issue #2).
+
 The memory test needs the pinned ai-memory-vault source under ignored `upstream/source/`. Both .NET projects have no package references; an isolated NuGet configuration with no package feeds can be used for the baseline builds.
 
 Audit results on an isolated copy before relocation:
