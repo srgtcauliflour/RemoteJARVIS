@@ -86,7 +86,7 @@ After fresh staging, copy the tracked `integrations/backtalk/uv.lock` into `runt
 
 The guard reports paths/line numbers, rejects typical secret/state/build/archive paths and scans indexed text for high-confidence credential markers. It does not validate arbitrary binary assets, all token formats or Git history. Do not disable a finding to rush publication.
 
-The first-party license and adapted-memory attribution/licensing scope remain draft-review items before broad public contributions or distribution of the combined application. Original memory-vault license text is retained under `LICENSES/`, and `NOTICE.migration.md` identifies the adaptation. No new permissive project license is applied to third-party material.
+**License decision (2026-09-11):** the maintainer has chosen **AGPL-3.0-or-later** as the first-party project license, matching the license already used by the project's own runtime dependencies (fullstack-agent, Backtalk, ai-visualizer, barehands). The full text is at `LICENSE`. This does not relicense the adapted ai-memory-vault material: original memory-vault license text is retained under `LICENSES/`, and `NOTICE.migration.md` identifies the adaptation and records why the two licenses coexist in this repository. Distribution of the combined application, and acceptance of significant external contributions, should still get a maintainer re-review as the project grows.
 
 ## Migration execution evidence — 2026-09-11
 
@@ -97,6 +97,7 @@ Separate commits preserve review boundaries:
 1. `f169883`: imports all 26 selected source/lock/license files with their original bytes and adds the reviewed repository support files.
 2. `63d51a7`: changes only the Windows security project's target framework to `net10.0-windows` and updates its README. This accurately declares the existing CNG/Windows dependency; no authentication implementation or warning policy changes.
 3. `769d78d`: adds an executable console harness for the existing unchanged protocol checks, plus test instructions. It fails if any check fails or no checks run.
+4. Adds `LICENSE` (AGPL-3.0-or-later) and records the license decision in `NOTICE.migration.md` and here.
 
 Current local results on Windows with .NET SDK 10.0.401 and Node 24.19.0:
 
@@ -107,4 +108,4 @@ Current local results on Windows with .NET SDK 10.0.401 and Node 24.19.0:
 - Dedicated Gitleaks 8.30.1 staged/history scans: no leaks found. The scanner was obtained from its official release and its archive SHA-256 verified against the published release digest.
 - Indexed-file publication guard and scaffold validator: pass.
 
-The archive's first-party C# implementation files, existing tests, scripts and dependency locks remain unchanged. The one imported project-file correction is visible separately from the frozen import. The draft still needs maintainer/license review and CI results. No iOS, live pairing, voice, Claude session or production remote service is claimed; no runtime cutover or release tag was performed.
+The archive's first-party C# implementation files, existing tests, scripts and dependency locks remain unchanged. The one imported project-file correction is visible separately from the frozen import. The draft still needs maintainer/CI review before merge. No iOS, live pairing, voice, Claude session or production remote service is claimed; no runtime cutover or release tag was performed.
