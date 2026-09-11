@@ -1,0 +1,13 @@
+{
+  "name": "remotejarvis-development",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free development and readiness tooling for RemoteJARVIS",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "doctor": "node scripts/preflight.mjs",
+    "check:readiness": "node scripts/preflight.mjs --strict"
+  }
+}

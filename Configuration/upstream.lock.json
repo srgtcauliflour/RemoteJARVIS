@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "components": [
+    {
+      "name": "ai-memory-vault",
+      "repository": "https://github.com/jaredrhod/ai-memory-vault",
+      "commit": "659bba9c8b351c937dd393b3042801d1ff1b502c",
+      "archive_url": "https://api.github.com/repos/jaredrhod/ai-memory-vault/zipball/659bba9c8b351c937dd393b3042801d1ff1b502c",
+      "archive_sha256": "56c090bc4432027ba695971f2fe10fb9e28f38cd6067fa042fed3bb4afb710d6",
+      "archive_file": "upstream/ai-memory-vault.zip",
+      "source_directory": "upstream/source/jaredrhod-ai-memory-vault-659bba9",
+      "license_summary": "Attribution-ShareAlike 4.0 International"
+    },
+    {
+      "name": "ai-visualizer",
+      "repository": "https://github.com/jaredrhod/ai-visualizer",
+      "commit": "6921e1d4b06bdd4a34c5264882d5257c4d5f70fd",
+      "archive_url": "https://api.github.com/repos/jaredrhod/ai-visualizer/zipball/6921e1d4b06bdd4a34c5264882d5257c4d5f70fd",
+      "archive_sha256": "40b1707c1f8d26b6df2d7fb3a7740bfd191ab87866a2bee7ebd5c14474afa706",
+      "archive_file": "upstream/ai-visualizer.zip",
+      "source_directory": "upstream/source/jaredrhod-ai-visualizer-6921e1d",
+      "license_summary": "GNU AFFERO GENERAL PUBLIC LICENSE"
+    },
+    {
+      "name": "backtalk",
+      "repository": "https://github.com/jaredrhod/backtalk",
+      "commit": "84b3a6cd321060cabb74aad6ebe794621cf99bd3",
+      "archive_url": "https://api.github.com/repos/jaredrhod/backtalk/zipball/84b3a6cd321060cabb74aad6ebe794621cf99bd3",
+      "archive_sha256": "bcd29b31c8d0dd98372a1d6a1bcb5a24dc718f4b73c1b9bad233bbbf7c9b0043",
+      "archive_file": "upstream/backtalk.zip",
+      "source_directory": "upstream/source/jaredrhod-backtalk-84b3a6c",
+      "license_summary": "GNU AFFERO GENERAL PUBLIC LICENSE"
+    },
+    {
+      "name": "barehands",
+      "repository": "https://github.com/jaredrhod/barehands",
+      "commit": "eb23bed2d772f9d5a24de26fb92f46c3c76d69cf",
+      "archive_url": "https://api.github.com/repos/jaredrhod/barehands/zipball/eb23bed2d772f9d5a24de26fb92f46c3c76d69cf",
+      "archive_sha256": "cb82b9e634f58eec26e966ef751e62978f736fb1cc6bdda7e34d6f49a65f4561",
+      "archive_file": "upstream/barehands.zip",
+      "source_directory": "upstream/source/jaredrhod-barehands-eb23bed",
+      "license_summary": "GNU AFFERO GENERAL PUBLIC LICENSE"
+    },
+    {
+      "name": "fullstack-agent",
+      "repository": "https://github.com/jaredrhod/fullstack-agent",
+      "commit": "5bb159f47dbd6fa8f108651d0532a43aef16346b",
+      "archive_url": "https://api.github.com/repos/jaredrhod/fullstack-agent/zipball/5bb159f47dbd6fa8f108651d0532a43aef16346b",
+      "archive_sha256": "1f4151b93b688074a874e5f53fec9e22981f8db74987309c807fe8877913e619",
+      "archive_file": "upstream/fullstack-agent.zip",
+      "source_directory": "upstream/source/jaredrhod-fullstack-agent-5bb159f",
+      "license_summary": "GNU AFFERO GENERAL PUBLIC LICENSE"
+    }
+  ]
+}

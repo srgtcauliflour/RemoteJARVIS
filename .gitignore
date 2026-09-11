@@ -1,37 +1,89 @@
-# Secrets/local configuration
+# Local installation state, personal memory and downloaded upstream snapshots
+.tools/
+.tmp/
+.host-test-*/
+runtime/
+artifacts/
+upstream/
+memory-vault/
+
+# Environment, credentials, host trust and signing material
 .env
 .env.*
 !.env.example
 *.pem
+*.key
 *.p12
 *.pfx
-*.key
+*.cer
+*.crt
+*.mobileprovision
+*.provisionprofile
+*.keystore
+*.jks
+*.snk
+id_rsa
+id_ed25519
+.npmrc
+.pypirc
+NuGet.Config.local
+appsettings.Local.json
+*.local.xcconfig
 
-# macOS / Xcode
+# Xcode and Swift build/user state; keep source and shared project configuration
 .DS_Store
 DerivedData/
-*.xcuserstate
 xcuserdata/
+*.xcuserstate
 *.ipa
-
-# Swift Package Manager
+*.xcarchive/
+*.dSYM/
 .build/
 .swiftpm/
 
-# Python
+# .NET outputs (scoped so future source scripts in bin/ are not hidden)
+/host/**/bin/
+/host/**/obj/
+/protocol/**/bin/
+/protocol/**/obj/
+/tests/**/bin/
+/tests/**/obj/
+TestResults/
+*.user
+*.suo
+.vs/
+
+# Python and Node caches/dependencies
 __pycache__/
 *.py[cod]
 .venv/
-
-# Node (if used by tooling/host)
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 node_modules/
+.npm/
 
-# Editors
+# Editors, diagnostics and generated output
 .vscode/
 .idea/
-
-# Logs/build output
+Thumbs.db
 *.log
+*.dump
+*.dmp
 build/
 dist/
 coverage/
+.cache/
+.nuget/
+.dotnet-home/
+.nuget-packages/
+
+# Raw backups must never be used as a public source import
+/RemoteJARVIS*.zip
+/migration-kit/
+/migration-preview/
+
+# Never blanket-ignore *.json, *.lock, *.csproj, *.plist, *.entitlements,
+# *.xcconfig, Package.resolved, source assets, or LICENSE/NOTICE files.
+# Ignoring a path does not untrack it or remove it from Git history.

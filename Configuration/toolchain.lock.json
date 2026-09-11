@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "platform": "win32-x64",
+  "provenance": {
+    "publisher": "release manifests and official release assets in .tools/downloads",
+    "observed": "local SHA256 hashes captured before installer creation"
+  },
+  "tools": {
+    "uv": {
+      "version": "0.12.13",
+      "artifact": "uv.zip",
+      "url": "https://github.com/astral-sh/uv/releases/download/0.12.13/uv-x86_64-pc-windows-msvc.zip",
+      "publisherSha256": "a86c9dc7bad9b03f388583b7187c05fe9951c2e0d392217e8fd43d97787f6ec2",
+      "observedSha256": "a86c9dc7bad9b03f388583b7187c05fe9951c2e0d392217e8fd43d97787f6ec2",
+      "install": "zip/uv.exe"
+    },
+    "git": {
+      "version": "2.55.0.5",
+      "artifact": "PortableGit.7z.exe",
+      "url": "https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/PortableGit-2.55.0.5-64-bit.7z.exe",
+      "publisherSha256": "5aa8a20f6e9abb2c755f0e73c91c687701a46b309ad84a0ca6509380fa4ae290",
+      "observedSha256": "5aa8a20f6e9abb2c755f0e73c91c687701a46b309ad84a0ca6509380fa4ae290",
+      "install": "self-extracting archive"
+    },
+    "claude": {
+      "version": "2.1.236",
+      "artifact": "claude.exe",
+      "url": "https://downloads.claude.ai/claude-code-releases/2.1.236/win32-x64/claude.exe",
+      "publisherSha256": "647e736f20c9ff0553c754624cbf8a6dcac196e8595509d8f63dce8bbe818757",
+      "observedSha256": "647e736f20c9ff0553c754624cbf8a6dcac196e8595509d8f63dce8bbe818757",
+      "install": "copy executable"
+    },
+    "espeak": {
+      "version": "1.52.0",
+      "artifact": "espeak-ng.msi",
+      "url": "https://github.com/espeak-ng/espeak-ng/releases/download/1.52.0/espeak-ng.msi",
+      "publisherSha256": null,
+      "observedSha256": "7f673c709ea5dd579d3b5ebb98688cc575328a6ab7438d2bc405b88cedaeafb9",
+      "install": "msiexec administrative extraction",
+      "expectedFile": "espeak/eSpeak NG/libespeak-ng.dll"
+    }
+  },
+  "python": { "version": "3.12.14", "method": "uv python install", "registry": false },
+  "installedObservedSha256": {
+    "uv.exe": "e43cc6ca110540ad845ad6aa1e468e224813eb1da76e145413a262d7073d05e7",
+    "git.exe": "78211c7ed73988da93a6d8a33d47ec6187f464d7ea2a9a00c182bbd7a1ecf30f",
+    "claude.exe": "647e736f20c9ff0553c754624cbf8a6dcac196e8595509d8f63dce8bbe818757"
+  }
+}
