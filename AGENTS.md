@@ -11,6 +11,7 @@ Before implementation, read:
 3. `docs/DEVELOPMENT.md`
 4. `SECURITY.md`
 5. the GitHub issue assigned to the task
+6. `docs/IOS-MASTER-SPEC.md` — **mandatory**, in full, before any iOS, AgentBridge, protocol, or authentication/security work. See §5 below.
 
 For component-specific work, inspect the nearest README/AGENTS file if one exists.
 
@@ -64,6 +65,29 @@ Delegate narrowly-scoped work to faster/lower-cost agents where available:
 The lead agent remains responsible for integration and correctness.
 
 ## 5. RemoteJARVIS security invariants
+
+`docs/IOS-MASTER-SPEC.md` is the full authoritative specification these
+invariants are drawn from, including the complete Passkey-pairing
+architecture, session-security model, and iOS/AgentBridge system design.
+Read it in full before touching iOS, AgentBridge, protocol, or
+authentication/security code — the list below is a short-form summary for
+quick reference, not a substitute. That document's §87 ("Security
+Hierarchy") and §88 ("Passkey Rule — Absolute") are binding on every agent
+and every human contributor. Treat them with the same severity as this
+section: violating them is not a style nit, it is a security regression.
+
+**iOS SDK currency.** `docs/IOS-MASTER-SPEC.md` fixes iOS 27 / Xcode 27 as
+the minimum target. That minimum only moves by an explicit maintainer
+decision, but the SDK itself changes constantly, and the spec is explicit
+(§2) that the current Apple documentation and SDK win over the document's
+own prose whenever they disagree. Before writing or reviewing any iOS,
+AgentCore, or AgentBridge platform code: verify the API against the actual
+current Apple documentation/SDK rather than training memory or the spec's
+descriptions, and record what you verified in `docs/PLATFORM-API-MANIFEST.md`
+(create it per the master spec §3 if it doesn't exist yet) — SDK/Xcode/Swift
+versions, API availability, entitlements, deprecations, and any divergence
+from what the master spec assumed. An agent that ships iOS platform code
+without doing this has not satisfied this section.
 
 These may not be changed without an explicit architecture/security issue and maintainer approval:
 

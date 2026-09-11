@@ -6,6 +6,8 @@ This document captures stable boundaries for collaborative development. Replace 
 
 ### iOS client (`ios/`)
 
+See `docs/IOS-MASTER-SPEC.md` for the full, authoritative iOS/AgentBridge build specification and authentication architecture — required reading before implementing this component.
+
 Responsibilities:
 - mobile UI
 - first-time host pairing
