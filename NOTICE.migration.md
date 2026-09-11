@@ -1,6 +1,6 @@
 # Upstream provenance and migration notice
 
-This import preserves authored source from the RemoteJARVIS snapshot audited on 2026-09-11. It does not choose a license for the first-party project. The maintainer must settle that choice and the treatment of adapted material before public source publication.
+This draft import preserves authored source from the RemoteJARVIS snapshot audited on 2026-09-11. It does not choose a license for the first-party project. The maintainer's license choice and the treatment of adapted material remain explicit draft-review items before inviting broad public contributions or distributing the combined application.
 
 `scripts/Initialize-Memory.ps1` identifies its initial vault structure, daily-note pattern, boot sequence and maintenance rules as adapted from ai-memory-vault by Jared Rhodenizer, pinned at commit `659bba9c8b351c937dd393b3042801d1ff1b502c`:
 

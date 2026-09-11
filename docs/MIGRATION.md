@@ -70,7 +70,7 @@ Audit results on an isolated copy before relocation:
 
 The mapped rehearsal reproduced the same test/build outcomes. The final import contains 26 copied source/lock/license files with manifest hashes. The combined scaffold/import index contains 57 files. Ignore-rule probes retained source/templates while excluding local output; a deliberately force-staged `.env` fixture was rejected.
 
-Do not call this a passing migration baseline while the security build fails. Prepare a narrowly scoped, separately reviewed Windows-platform build declaration fix; retain warnings-as-errors and all authentication behavior. Add the missing protocol test harness in an explicit test-infrastructure change. Document evidence again before tagging a passing baseline.
+The subsequent migration attempt resolved the build declaration and added the missing runner in separate commits; see the execution evidence below. The original import commit retains the exact input bytes and its original failure. Do not treat local test success as maintainer approval or a release baseline tag.
 
 ## Local runtime continuity
 
@@ -86,4 +86,25 @@ After fresh staging, copy the tracked `integrations/backtalk/uv.lock` into `runt
 
 The guard reports paths/line numbers, rejects typical secret/state/build/archive paths and scans indexed text for high-confidence credential markers. It does not validate arbitrary binary assets, all token formats or Git history. Do not disable a finding to rush publication.
 
-Before public source publication, the maintainer must settle the first-party license and adapted-memory attribution/licensing scope. Original memory-vault license text is retained under `LICENSES/`, and `NOTICE.migration.md` identifies the adaptation. Do not apply a new permissive project license to third-party material by assumption.
+The first-party license and adapted-memory attribution/licensing scope remain draft-review items before broad public contributions or distribution of the combined application. Original memory-vault license text is retained under `LICENSES/`, and `NOTICE.migration.md` identifies the adaptation. No new permissive project license is applied to third-party material.
+
+## Migration execution evidence — 2026-09-11
+
+The audited import was applied on branch `chore/import-current-source` in a fresh clone of the existing repository. The original source/archive and live installation remain unchanged.
+
+Separate commits preserve review boundaries:
+
+1. `f169883`: imports all 26 selected source/lock/license files with their original bytes and adds the reviewed repository support files.
+2. `63d51a7`: changes only the Windows security project's target framework to `net10.0-windows` and updates its README. This accurately declares the existing CNG/Windows dependency; no authentication implementation or warning policy changes.
+3. `769d78d`: adds an executable console harness for the existing unchanged protocol checks, plus test instructions. It fails if any check fails or no checks run.
+
+Current local results on Windows with .NET SDK 10.0.401 and Node 24.19.0:
+
+- Security library and protocol/checks project: Release builds pass, zero warnings/errors.
+- Existing protocol checks: 20/20 pass.
+- Node preflight tests: 7/7 pass.
+- Installer checks, host staging/idempotence/WhatIf suite and memory initializer suite: pass; memory has 5 passing cases.
+- Dedicated Gitleaks 8.30.1 staged/history scans: no leaks found. The scanner was obtained from its official release and its archive SHA-256 verified against the published release digest.
+- Indexed-file publication guard and scaffold validator: pass.
+
+The archive's first-party C# implementation files, existing tests, scripts and dependency locks remain unchanged. The one imported project-file correction is visible separately from the frozen import. The draft still needs maintainer/license review and CI results. No iOS, live pairing, voice, Claude session or production remote service is claimed; no runtime cutover or release tag was performed.
