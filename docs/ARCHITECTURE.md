@@ -82,7 +82,7 @@ Protocol changes should include:
 ## TODO during migration
 
 - Document current language/framework for host service.
-- Record the exact post-pairing authentication scheme already chosen/implemented.
+- Record the exact post-pairing authentication scheme already chosen/implemented. A concrete proposal is drafted in `docs/ADR/0002-post-pair-authentication.md` — status Proposed, awaiting maintainer acceptance (issue #5); this TODO stays open until that ADR is accepted.
 - Document connection discovery/routing model.
 - Document remote-build/compilation path for iOS.
 - Record Codex/Claude integration interfaces and permission boundaries.
