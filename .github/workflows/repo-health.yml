@@ -20,3 +20,40 @@ jobs:
         run: python scripts/validate-repo.py
       - name: Check indexed files for excluded material
         run: python scripts/check-public-import.py
+
+  build-and-test:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Read pinned memory fixture
+        id: memory-fixture
+        run: |
+          $lock = Get-Content Configuration/upstream.lock.json -Raw | ConvertFrom-Json
+          $memory = $lock.components | Where-Object name -EQ 'ai-memory-vault'
+          "repository=$($memory.repository -replace '^https://github.com/', '')" >> $env:GITHUB_OUTPUT
+          "ref=$($memory.commit)" >> $env:GITHUB_OUTPUT
+          "path=$($memory.source_directory)" >> $env:GITHUB_OUTPUT
+      - name: Restore pinned memory templates and license
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.memory-fixture.outputs.repository }}
+          ref: ${{ steps.memory-fixture.outputs.ref }}
+          path: ${{ steps.memory-fixture.outputs.path }}
+          persist-credentials: false
+      - name: Run build and test verification
+        run: ./scripts/Verify-Build.ps1
