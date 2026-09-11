@@ -1,0 +1,12 @@
+{
+  "permission_mode": "ask",
+  "signals_dir": "C:/PATH/TO/RemoteJARVIS/runtime/state/backtalk",
+  "mic_mode": "ptt",
+  "show_usage": false,
+  "extra_dirs": ["C:/PATH/TO/RemoteJARVIS/runtime/memory-vault"],
+  "voice": "bm_lewis",
+  "resume_last_session": true,
+  "agent_dir": "C:/PATH/TO/RemoteJARVIS/runtime/agent",
+  "name": "RemoteJARVIS",
+  "stt_device": "cpu"
+}

@@ -18,3 +18,5 @@ jobs:
           python-version: '3.x'
       - name: Validate repository policy
         run: python scripts/validate-repo.py
+      - name: Check indexed files for excluded material
+        run: python scripts/check-public-import.py
